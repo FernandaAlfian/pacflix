@@ -19,10 +19,10 @@ class Plan:
                 ["Services", "Detail"],
                 ["Plan Name", self.name],
                 ["Streaming", 'v' if self.can_stream else '-'],
-                ["Download", self.can_download],
-                ["SD Quality", self.has_SD],
-                ["HD Quality", self.has_HD],
-                ["UHD Quality", self.has_UHD],
+                ["Download", 'v' if self.can_download else '-'],
+                ["SD Quality", 'v' if self.has_SD else '-'],
+                ["HD Quality", 'v' if self.has_HD else '-'],
+                ["UHD Quality", 'v' if self.has_UHD else '-'],
                 ["Number of Devices", self.num_of_devices],
                 ["Content", self.content],
                 ["Price", self.price]
@@ -69,4 +69,3 @@ premium_plan = Plan(
 
 list_plan = [basic_plan, standard_plan, premium_plan]
 
-# premium_plan.check_plan()
